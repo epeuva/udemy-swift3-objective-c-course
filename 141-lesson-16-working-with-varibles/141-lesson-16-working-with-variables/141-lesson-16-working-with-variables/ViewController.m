@@ -18,11 +18,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // NSString
     NSString *string1 = @"Hello";
     NSString *string2 = @"Epeuva";
     
     self.label1.text = [NSString stringWithFormat:@"%@ %@", string1, string2];
     
+    
+    // int
+    int int1 = 3;
+    
+    self.label2.text = [NSString stringWithFormat:@"%d", int1];
 }
 
 
