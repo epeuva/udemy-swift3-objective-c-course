@@ -27,8 +27,9 @@
     
     // int
     int int1 = 3;
+    int int2 = 10;
     
-    self.label2.text = [NSString stringWithFormat:@"%d", int1];
+    self.label2.text = [NSString stringWithFormat:@"%d", int1 + int2];
 }
 
 
