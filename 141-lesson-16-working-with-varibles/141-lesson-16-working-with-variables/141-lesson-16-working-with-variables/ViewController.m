@@ -19,8 +19,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSString *string1 = @"Hello";
+    NSString *string2 = @"Epeuva";
     
-    self.label1.text = string1;
+    self.label1.text = [NSString stringWithFormat:@"%@ %@", string1, string2];
     
 }
 
