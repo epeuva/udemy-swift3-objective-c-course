@@ -22,6 +22,12 @@
     NSArray *array = @[@"Apple", @"Banana", @"Orange"];
     self.label.text = array[0];
     
+    // NSMutableArray
+    NSMutableArray *array2 = [[NSMutableArray alloc] initWithObjects:@"Apple",@"Banana",@"Orange", nil];
+    self.label2.text = array2[1];
+    [array2 addObject:@"Melon"];
+    self.label3.text = array2[3];
+    
 }
 
 
