@@ -1,0 +1,22 @@
+language: objective-c
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode8
+    - os: osx
+      osx_image: xcode9
+    - os: osx
+      osx_image: xcode9.1
+before_install:
+- brew cask uninstall oclint
+- brew tap oclint/formulae
+- brew install oclint
+- oclint -version
+script:
+  - cd 141-lesson-16-working-with-variables
+  - xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -dry-run | tee xcodebuild.log
+  - oclint-xcodebuild
+  - oclint-json-compilation-database oclint_args -- -rc=LONG_LINE=300s
+
+
+  
