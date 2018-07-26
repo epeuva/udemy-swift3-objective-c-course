@@ -25,8 +25,23 @@
     // NSMutableArray
     NSMutableArray *array2 = [[NSMutableArray alloc] initWithObjects:@"Apple",@"Banana",@"Orange", nil];
     self.label2.text = array2[1];
+    
+    NSLog(@"%@", array2); // see log
+    
     [array2 addObject:@"Melon"];
+    [array2 insertObject:@"Strawberry" atIndex:0];
+    
     self.label3.text = array2[3];
+    
+    NSLog(@"%@", array2); // see log
+    NSLog(@"Array count: %lu", array2.count); // unsigned long
+    // see: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
+    // https://developer.apple.com/documentation/foundation/nsarray/1409982-count
+    
+    
+    [array2 removeObjectAtIndex:1];
+    NSLog(@"%@", array2); // see log
+    NSLog(@"Array count: %lu", array2.count); // unsigned long
     
 }
 
