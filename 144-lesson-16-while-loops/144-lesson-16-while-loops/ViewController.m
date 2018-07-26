@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    int number = 0;
+    while (number < 5) {
+        NSLog(@"%i", number);
+        number++;
+    }
+    
+    int number1 = 1000;
+    int number2 = 100;
+    while (number1 > 0) {
+        NSLog(@"%i", number1);
+        number1 -= number2;
+    }
+    
 }
 
 
