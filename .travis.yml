@@ -4,12 +4,17 @@ matrix:
     - os: osx
       osx_image: xcode9.4.1
 before_install:
-- brew cask uninstall oclint
-- brew tap oclint/formulae
-- brew install oclint
-- oclint -version
+  - brew cask uninstall oclint
+  - brew tap oclint/formulae
+  - brew install oclint
+  - oclint -version
+env:
+  - TEST_DIR=141-lesson-16-working-with-variables
+  - TEST_DIR=142-lesson-16-working-with-arrays
+  - TEST_DIR=143-lesson-16-if-else-or
+  - TEST_DIR=144-lesson-16-while-loops
 script:
-  - cd 141-lesson-16-working-with-variables
+  - cd TEST_DIR
   - xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -dry-run | tee xcodebuild.log
   - oclint-xcodebuild
   - oclint-json-compilation-database oclint_args -- -rc=LONG_LINE=300s
