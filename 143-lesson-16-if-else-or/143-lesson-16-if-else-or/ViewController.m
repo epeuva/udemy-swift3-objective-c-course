@@ -17,6 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    BOOL state = false;
+    
+    if (state == true) {
+        self. label1.text = @"Allow access";
+    } else {
+        self. label1.text = @"Deny access";
+    }
+    
+    NSString *name = @"Epeuva";
+    
+    if([name isEqualToString:@"Epeuva"]) {
+        self.label2.text = @"Hello Epeuva";
+    } else if ([name isEqualToString:@"Steve"]) {
+        self.label2.text = @"Hi Steve";
+    } else {
+        self.label2.text = @"Huh, you got a terrible name";
+    }
+    
+    
 }
 
 
