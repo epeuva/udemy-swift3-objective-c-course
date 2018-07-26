@@ -14,7 +14,7 @@ env:
   - TEST_DIR=143-lesson-16-if-else-or
   - TEST_DIR=144-lesson-16-while-loops
 script:
-  - cd TEST_DIR
+  - cd $TEST_DIR
   - xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -dry-run | tee xcodebuild.log
   - oclint-xcodebuild
   - oclint-json-compilation-database oclint_args -- -rc=LONG_LINE=300s
